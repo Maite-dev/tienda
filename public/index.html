@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda</h1>
+        <nav>
+            <ul>
+                <li><a href="productos.html">Ver Productos</a></li> <!-- Nuevo enlace para ver productos -->
+                <li><a href="#agregar-producto">Agregar Producto</a></li>
+                <li><a href="#cargar-csv">Cargar CSV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Formulario para agregar productos -->
+        <section id="agregar-producto">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="add-product-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" required>
+
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" required>
+
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </section>
+
+        <!-- Formulario para cargar un archivo CSV -->
+        <section id="cargar-csv">
+            <h2>Cargar Productos desde CSV</h2>
+            <form id="csv-upload-form" enctype="multipart/form-data">
+                <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+                <button type="submit">Cargar CSV</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
